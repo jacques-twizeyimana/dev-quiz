@@ -1,45 +1,35 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="App py-20">
+      <div className="form p-5 px-7 border mx-auto w-full sm:w-10/12 md:w-2/3 lg:w-1/2 bg-blue-600 text-white">
+        <div className="py-2">
+          <label className="block text-lg">Your full given name</label>
+          <input
+            type="text"
+            className="block border border-white h-14 bg-transparent w-full font-normal outline-none px-3 "
+          />
+        </div>
+        <div className="py-2">
+          <label className="block text-lg">
+            What school do you plan to attend
+          </label>
+          <input
+            type="text"
+            className="block border border-white h-14 bg-transparent w-full font-normal outline-none px-3 "
+          />
+        </div>
+        <div className="py-2">
+          <label className="block text-lg">
+            Please take a moment to describe your intended area of study
+          </label>
+          <textarea className="block border border-white h-48 py-2 bg-transparent w-full font-normal outline-none px-3 resize-none" />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
